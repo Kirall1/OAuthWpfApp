@@ -1,0 +1,12 @@
+<UserControl x:Class="WpfApp.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Label Margin="5, 0,0,2">Login:</Label>
+        <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" Width="200" Margin="5, 0, 0, 5"/>
+        <Label Margin="5, 5, 0, 2">Password:</Label>
+        <PasswordBox x:Name="PasswordBox" PasswordChanged="PasswordBox_PasswordChanged" Width="200" Margin="5, 0, 0, 5"/>
+        <Button Content="Login" Command="{Binding LoginCommand}" Width="200" Margin="10"/>
+        <Button Content="Back" Command="{Binding ReturnToMainCommand}" Width="200" Margin="10"/>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{E6C3C316-CB21-481A-AA0B-F8BE3A6E4471}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csproj", "{B6A4AF2A-0CBA-49E3-ACF5-F6F2871795A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp.Tests", "WpfApp.Tests\WpfApp.Tests.csproj", "{F1A2D0CE-9022-48F5-B8D7-8E317FE42EE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6C3C316-CB21-481A-AA0B-F8BE3A6E4471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C3C316-CB21-481A-AA0B-F8BE3A6E4471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C3C316-CB21-481A-AA0B-F8BE3A6E4471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C3C316-CB21-481A-AA0B-F8BE3A6E4471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A4AF2A-0CBA-49E3-ACF5-F6F2871795A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A4AF2A-0CBA-49E3-ACF5-F6F2871795A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A4AF2A-0CBA-49E3-ACF5-F6F2871795A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A4AF2A-0CBA-49E3-ACF5-F6F2871795A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1A2D0CE-9022-48F5-B8D7-8E317FE42EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A2D0CE-9022-48F5-B8D7-8E317FE42EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A2D0CE-9022-48F5-B8D7-8E317FE42EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A2D0CE-9022-48F5-B8D7-8E317FE42EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

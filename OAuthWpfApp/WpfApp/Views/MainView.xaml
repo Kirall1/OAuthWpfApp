@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="WpfApp.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModels="clr-namespace:WpfApp.ViewModels">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button Content="Registration" Command="{Binding OpenRegistrationCommand}" Width="200" Margin="10"/>
+        <Button Content="Login" Command="{Binding OpenLoginCommand}" Width="200" Margin="10"/>
+        <Button Content="View User Data" Command="{Binding OpenUserDataCommand}" Width="200" Margin="10"/>
+    </StackPanel>
+</UserControl>
