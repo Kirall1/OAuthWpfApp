@@ -110,6 +110,8 @@ namespace WpfApp.Models
                 new KeyValuePair<string, string>("grant_type", "refresh_token"),
                 new KeyValuePair<string, string>("refresh_token", _refreshToken),
             });
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
+
 
             var response = await _httpClient.PostAsync("/connect/refresh", content);
             var responseContent = await response.Content.ReadAsStringAsync();
@@ -122,7 +124,8 @@ namespace WpfApp.Models
             }
             else
             {
-                throw new Exception($"Token refresh failed: {responseContent}");
+                var result = JsonSerializer.Deserialize<ErrorResponse>(responseContent);
+                throw new Exception($"Token refresh failed: {result.ErrorDescription}");
             }
         }
     }
