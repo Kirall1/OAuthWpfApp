@@ -13,7 +13,7 @@ namespace WpfApp.Models
 
         public ApiManager()
         {
-            _httpClient = new HttpClient { BaseAddress = new Uri("https://localhost:44349") };
+            _httpClient = new HttpClient { BaseAddress = new Uri("https://localhost:7199") };
         }
         
         public ApiManager(HttpClient httpClient)
