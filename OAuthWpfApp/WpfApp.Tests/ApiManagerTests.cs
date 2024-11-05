@@ -91,14 +91,14 @@ namespace WpfApp.Tests
         {
             // Arrange
             var user = new User { Username = "testuser", Password = "wrong_password" };
-            var expectedResponseContent = "Invalid credentials";
+            var expectedResponseContent = "Authentication failed: ";
 
             _httpMessageHandlerMock.Protected()
                 .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
                 .ReturnsAsync(new HttpResponseMessage
                 {
                     StatusCode = HttpStatusCode.Unauthorized,
-                    Content = new StringContent(expectedResponseContent)
+                    Content = new StringContent($"{{\"ErrorDescription\": \"{expectedResponseContent}\"}}")
                 });
 
             // Act & Assert
@@ -158,14 +158,14 @@ namespace WpfApp.Tests
         public async Task RefreshToken_Failure_ThrowsExceptionWithServerMessage()
         {
             // Arrange
-            var expectedResponseContent = "Refresh token expired";
+            var expectedResponseContent = "Token refresh failed: ";
 
             _httpMessageHandlerMock.Protected()
                 .Setup<Task<HttpResponseMessage>>("SendAsync", ItExpr.IsAny<HttpRequestMessage>(), ItExpr.IsAny<CancellationToken>())
                 .ReturnsAsync(new HttpResponseMessage
                 {
                     StatusCode = HttpStatusCode.BadRequest,
-                    Content = new StringContent(expectedResponseContent)
+                    Content = new StringContent($"{{\"ErrorDescription\": \"{expectedResponseContent}\"}}")
                 });
 
             // Act & Assert
