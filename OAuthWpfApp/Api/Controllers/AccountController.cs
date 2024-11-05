@@ -59,6 +59,9 @@ public class AccountController : ControllerBase
         
         principal.SetScopes(new[] { Scopes.OpenId, Scopes.Email, Scopes.Profile, Scopes.OfflineAccess });
 
+        principal.SetAccessTokenLifetime(TimeSpan.FromSeconds(30));
+        principal.SetRefreshTokenLifetime(TimeSpan.FromSeconds(60));
+
         return SignIn(principal, OpenIddictServerAspNetCoreDefaults.AuthenticationScheme);
     }
 

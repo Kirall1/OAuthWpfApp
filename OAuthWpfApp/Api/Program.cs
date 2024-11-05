@@ -28,6 +28,8 @@ builder.Services.AddOpenIddict()
         options.AllowPasswordFlow();
         options.AllowRefreshTokenFlow();
         options.SetTokenEndpointUris("/connect/token", "connect/refresh");
+        options.SetAccessTokenLifetime(TimeSpan.FromSeconds(30));
+        options.SetRefreshTokenLifetime(TimeSpan.FromSeconds(60));
         options.AddEphemeralEncryptionKey()
             .AddEphemeralSigningKey();
         options.AcceptAnonymousClients();
